@@ -7,12 +7,14 @@ type Props = {
 }
 
 export default function Item({result}: Props) {
+
+    const linkTowikiPage = result.title.replace(' ' ,'_')
   
   const rowResult = (
     <div className='flex flex-col justify-center'>
         <h2>
             <Link
-                href={`https://en.wikipedia.org/w/api.php?curid=${result.pageid}`}
+                href={`https://en.wikipedia.org/wiki/${linkTowikiPage}`}
                 target='_blank'
                 className='text-xl font-bold underline'
             >
