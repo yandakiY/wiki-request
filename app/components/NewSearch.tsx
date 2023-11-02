@@ -19,7 +19,7 @@ export default function NewSearch() {
 
 
   return (
-        <form onSubmit={handleSubmit} method="post" className=''>
+        <form onSubmit={handleSubmit} method="post" className='py-1'>
             <div className='text-3xl flex flex-col items-center'>
                 <div className=''>
                     <input 

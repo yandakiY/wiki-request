@@ -12,9 +12,9 @@ export default function NavBar() {
         </div>
 
         <div>
-            <ul className='flex flex-row gap-8 md:gap-6'>
-                <Link href={"/"}>About me</Link>
-                <Link href={"/"}>Contacts</Link>
+            <ul className='flex flex-row gap-8 md:gap-6 font-bold text-lg'>
+                <Link target='_blank' href={"https://yandaki-dev.vercel.app/"}>About me</Link>
+                {/* <Link href={"/"}>Contacts</Link> */}
             </ul>
         </div>
     </nav>
