@@ -21,7 +21,7 @@ export default function Item({result}: Props) {
                 {result.title}
             </Link>
         </h2>
-        <p>{result.extract}</p>
+        <p className='max-w-lg'>{result.extract}</p>
     </div>
   )
 
