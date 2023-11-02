@@ -1,5 +1,6 @@
 import getWikiResult from "@/lib/getWikiResult"
 import Item from "./components/Item"
+import NewSearch from "../components/NewSearch"
 
 type Props = {
     params:{
@@ -35,15 +36,20 @@ export default async function ResultSearch( {params: {searchWord}} : Props ) {
 
     // console.log(Object.values(results))
     const content = (
-        <div className="z-10 flex flex-col items-center">
-            {results ? 
+        <div>
+            <div className="sticky top-[73px] bg-white">
+                <NewSearch />
+            </div>
+            <div className="z-10 flex flex-col items-center">
+                {results ? 
                     Object.values(results).map(result => {
                         if (!result.extract.match(/may refer to:/))
                             return <Item key={result.pageid} result={result} />
                     })
                     :
                     <h2>{`${searchWord} Not Found`}</h2>
-            }
+                }
+            </div>
         </div>
     )
 
