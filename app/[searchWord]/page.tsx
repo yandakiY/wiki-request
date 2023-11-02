@@ -47,7 +47,9 @@ export default async function ResultSearch( {params: {searchWord}} : Props ) {
                             return <Item key={result.pageid} result={result} />
                     })
                     :
-                    <h2>{`${searchWord} Not Found`}</h2>
+                    <div style={{fontFamily:'monospace'}} className="my-[300px] border border-slate-300 rounded-sm p-4 text-xl md:text-3xl">
+                        <h2>{`No results in Wiki for ${searchWord}`}</h2>
+                    </div>
                 }
             </div>
         </div>
