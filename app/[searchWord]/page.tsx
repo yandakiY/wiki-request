@@ -8,6 +8,8 @@ type Props = {
     }
 }
 
+
+
 export async function generateMetadata( {params: {searchWord}} : Props ) {
     
     const wikiData: Promise<SearchResult> = getWikiResult(searchWord)
@@ -16,12 +18,12 @@ export async function generateMetadata( {params: {searchWord}} : Props ) {
 
     if(!data?.query?.pages){
         return {
-            title: `${displayTerm} Not Found`
+            title: `Results for ${displayTerm} not found`
         }
     }
 
     return {
-        title: `${displayTerm}`,
+        title: `Results for : ${displayTerm}`,
         description: `Search results for : ${displayTerm}`
     }
 }
@@ -40,7 +42,7 @@ export default async function ResultSearch( {params: {searchWord}} : Props ) {
             <div className="sticky top-[73px] bg-white">
                 <NewSearch />
             </div>
-            <div className="z-10 flex flex-col items-center">
+            <div className="z-10 flex flex-col items-center text-base md:text-lg">
                 {results ? 
                     Object.values(results).map(result => {
                         if (!result.extract.match(/may refer to:/))
