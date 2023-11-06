@@ -26,7 +26,7 @@ export default function Search() {
                         type="text"
                         value={search}
                         onChange={e => setSearch(e.target.value)}
-                        className='text-center text-base border border-slate-700 rounded-sm w-[300px] md:w-[600px] px-2 py-2 focus:outline-none' name="word" id="word" placeholder='Effectuez une recherche...' />
+                        className='text-center text-base border border-slate-700 rounded-sm w-[300px] md:w-[600px] px-2 py-2 focus:outline-none' name="word" id="word" placeholder='...' />
                 </div>
                 <div>
                     <button className='my-4 font-bold border text-xl p-2 text-white transition ease-in-out delay-150 bg-slate-700 hover:bg-slate-900 duration-300 rounded-lg'>Make a search</button>

@@ -26,7 +26,7 @@ export default function NewSearch() {
                         type="search"
                         value={search}
                         onChange={e => setSearch(e.target.value)}
-                        className='text-center text-base border border-slate-400 rounded-sm w-[350px] md:w-[350px] px-2 py-2 focus:outline-none' name="word" id="word" placeholder='Effectuez une nouvelle recherche...' />
+                        className='text-center text-base border border-slate-400 rounded-sm w-[350px] md:w-[350px] px-2 py-2 focus:outline-none' name="word" id="word" placeholder='...' />
                 </div>
             </div>
         </form>
